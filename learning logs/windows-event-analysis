@@ -1,0 +1,19 @@
+## Goal
+Understand basic Windows authentication events and how SOC analysts analyze them.
+
+## Environment
+- Windows VM
+- Event Viewer
+- Sysmon
+
+## Investigation Steps
+(To be filled)
+
+## Findings
+(To be filled)
+
+## MITRE ATT&CK Mapping
+(To be filled)
+
+## Lessons Learned
+(To be filled)
