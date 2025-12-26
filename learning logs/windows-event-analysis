@@ -4,16 +4,23 @@ Understand basic Windows authentication events and how SOC analysts analyze them
 ## Environment
 - Windows VM
 - Event Viewer
-- Sysmon
+- Local User Account
 
 ## Investigation Steps
-(To be filled)
+- Generated a Windows Audite Failure for the user logon
+- Filtered for the Event I wanted to work on (Event 4625 Failed Logon)
+- Reviewed the Event details (Account name, Logon type, Source Network Address, Reasons for failure, etc)
 
 ## Findings
-(To be filled)
+- Logon Type was of Type 2 (Local (Keyboard) )
+- The source where the attempt was made from
+- Account Name
+- Failure Reason
 
 ## MITRE ATT&CK Mapping
-(To be filled)
+No need for it
 
 ## Lessons Learned
-(To be filled)
+- I learned how open the Windows Event Viewer
+- Learnt how to filter for Events I wanted
+- Learnt how to read the Logs
