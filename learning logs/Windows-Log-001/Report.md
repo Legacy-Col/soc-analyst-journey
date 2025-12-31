@@ -11,6 +11,9 @@ Understand basic Windows authentication events and how SOC analysts analyze them
 - Filtered Windows Seurity Log for Event 4625 (Failed Logon)
 - Reviewed the Event details (Account name, Logon type, Source Network Address and Failure Reasons
 
+## Evidence
+### ScreenShot 1: Image of Windows Event Viewer
+
 ## Findings
 - Event ID was generated for each failed logon attempt
 - Logon Type 2 indicated interactive (keyboard) login
