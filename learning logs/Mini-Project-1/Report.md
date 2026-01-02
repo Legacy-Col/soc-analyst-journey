@@ -25,7 +25,9 @@
 ### ScreenShot 3: Filtered Event ID 4688
 ![Filtered Event ID 4688](images/Evnt-4688.png)
 ### Screenshot 4: Details view for Event ID 4688
-![Details on the Execution Processes that occured](images/dtal-4688.png,dtal-4688(2).png,dtal-4688(3).png)
+![Details on the Execution process cmd.exe](images/dtal-4688.png)
+![Details on the Execution process powershell.exe](images/dtal-4688(2).png)
+![Details on the Execution process net.exe `net user`](images/dtal-4688(3).png)
 
 ## Correlation and Timeline Analysis
 - A sequence of multiple failed logon attempts (4625) followed by a successful authentication (4624) was observed.
