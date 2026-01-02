@@ -17,6 +17,15 @@
 - powershell.exe was subsequently launched from cmd.exe, forming a suspicious execution chain.
 - Command-line activity indicated the use of account enumeration commands, such as `net user`, which added investigative concern.
 
+## Evidence
+### Screenshot 1: Filtered Event ID 4625
+![]()
+### ScreenShot 2: Details view for Event 4625
+![])()
+### ScreenShot 3: Filtered Event ID 4688
+![]()
+### Screenshot 4: Details view for Event ID 4688
+
 ## Correlation and Timeline Analysis
 - A sequence of multiple failed logon attempts (4625) followed by a successful authentication (4624) was observed.
 - Shortly after successful authentication, suspicious process execution activity occurred.
