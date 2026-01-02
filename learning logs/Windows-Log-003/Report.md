@@ -12,6 +12,13 @@ Understanding Windows parent-child relatioship to understand suspicous execution
 - Filtered the logs for Event ID 4688
 - Analyzed the parent-child relationship
 
+## Evidence
+### ScreenShot 1: Launching Powershell on Windows Explorer
+- ![Powershell Launched](images/powershell-commands.png)
+### ScreenShot 2: Execution of cmd.exe command on powershell
+- ![Execution of cmd.exe](images/poershell-commandspng)
+### ScreenShow 3: Details View Process attention to command-line
+- ![Command Line](images/details-process.png)
 
 ## Findings
 - powershell.exe was launched by windows.exe
@@ -25,3 +32,7 @@ Understanding Windows parent-child relatioship to understand suspicous execution
 - Learned that Powershell can be Lauched through Windows Explorer
 - Office or Browsers opening powershell is an indicator of compromise and should be investigated
 - Learned the Importance of reading context before escalating suspicious behaviours
+
+## Analyst Notes
+- Normal user activities don't often include openning of the terminal throught Windows Exploerer
+- The Execution Process are suspicious based on the context from the Process Command Line   
