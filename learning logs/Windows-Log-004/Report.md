@@ -1,40 +1,44 @@
+# Log-004: PowerShell Execution & Script Block Logging (Event ID 4104)
+
 ## Goal
-Understand Powershell Execution and how SOC analysts evaluate script activities.
+Understand PowerShell execution and how SOC analysts evaluate script activities for potential suspicious behavior.
 
 ## Environment
-- Windows VM
+- Windows Virtual Machine
 - Event Viewer
-- Powershell
+- PowerShell
 
 ## Investigation Steps
-- Enabled Powershell Script Block Logging
-- Executed Powershell Comands
-- Event Viewer and Filtered for Event Log 4104
-- Reviewed Script BlockText and Execution Command
+1. Enabled PowerShell Script Block Logging.
+2. Executed several PowerShell commands (e.g., `net accounts`).
+3. Opened Event Viewer and filtered for Event ID 4104.
+4. Reviewed ScriptBlockText, command execution, and execution context.
 
 ## Evidence
-### ScreenShot 1: Executed Powershell Commands
-![Powershell Command](images/powershell.png)
 
-### ScreenShot 2: Filtered Event Viewer for Event ID 4104
-![Filtered Event ID 4104](images/Event-4104.png)
+### Screenshot 1: Executed PowerShell Commands
+![PowerShell Commands](images/powershell.png)
 
-### ScreenShot 3: Details of the Encoded ScriptBlock Text and Execution Context
+### Screenshot 2: Event Viewer Filtered for Event ID 4104
+![Filtered Event 4104](images/Event-4104.png)
+
+### Screenshot 3: Encoded ScriptBlockText & Execution Context
 ![Encoded ScriptBlockText](images/encoded.png)
 
-### ScreenShot 4: Details of the Decoded ScriptBlockText
+### Screenshot 4: Decoded ScriptBlockText
 ![Decoded ScriptBlockText](images/decoded.png)
 
-
 ## Findings
-- Powershell and the executed commands were carried out by the logged user
-- The Executed Powershell Commands were suspicious
-- There was an encoded command
+- PowerShell commands were executed by the logged-in user.
+- Some commands appeared suspicious due to unusual activity (e.g.,`net accounts`).
+- An **encoded command** was observed, which may indicate attempted obfuscation or malicious intent.
+- No malicious payload was executed, but the behavior warrants monitoring.
 
 ## MITRE ATT&CK Mapping
-- T1059.001 - Powershell
+- T1059.001 – PowerShell
 
 ## Lessons Learned
-- Powershell can be abused by attackers
-- Always look for encoded commands if there is any
-
+- PowerShell is a powerful administrative tool that can be abused by attackers.
+- Script Block Logging provides critical visibility into actual commands executed.
+- Always check for **encoded or obfuscated commands**, as these are often indicators of compromise.
+- Context matters: not all encoded commands are malicious, but they require closer inspection.
