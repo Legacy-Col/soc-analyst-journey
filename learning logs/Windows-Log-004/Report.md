@@ -14,13 +14,22 @@ Understand Powershell Execution and how SOC analysts evaluate script activities.
 
 ## Evidence
 ### ScreenShot 1: Executed Powershell Commands
+![Powershell Command](images/powershell.png)
+
 ### ScreenShot 2: Filtered Event Viewer for Event ID 4104
-### ScreenShot 3: Details of the ScriptBloct Text and Execution Context
+![Filtered Event ID 4104](images/Event-4104.png)
+
+### ScreenShot 3: Details of the Encoded ScriptBlock Text and Execution Context
+![Encoded ScriptBlockText](images/encoded.png)
+
+### ScreenShot 4: Details of the Decoded ScriptBlockText
+![Decoded ScriptBlockText](images/decoded.png)
+
 
 ## Findings
 - Powershell and the executed commands were carried out by the logged user
 - The Executed Powershell Commands were suspicious
-- No encoded Commands
+- There was an encoded command
 
 ## MITRE ATT&CK Mapping
 - T1059.001 - Powershell
