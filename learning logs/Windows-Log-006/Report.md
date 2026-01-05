@@ -1,5 +1,5 @@
 ## Goal
-Understanding how SOC analysts detect & analyze persistence mechanism using Windows Scheduled Task Log
+Understand how SOC analysts detect and analyze persistence mechanisms using Windows Scheduled Task logs.
 
 ## Environment
 - Windows VM
@@ -7,39 +7,40 @@ Understanding how SOC analysts detect & analyze persistence mechanism using Wind
 - Task Scheduler
 
 ## Investigation Steps
-- Enabled Audit Policy for Scheduled task
-- Created a Scheduled Task with Command Prompt using Admin Priviledges
-- Filtered for Event Log 4698 (Sceduled task created)
-- Filtered for Event Log 4699 (Scheduled task deleted)
-- Investigated the `task content, trigger type, run as and the trigger`
+- Enabled audit policy for scheduled task activity
+- Created a scheduled task using Command Prompt with administrative privileges
+- Filtered Security logs for Event ID 4698 (Scheduled task created)
+- Filtered Security logs for Event ID 4699 (Scheduled task deleted)
+- Investigated task content, trigger type, run-as context, and execution properties
 
 ## Evidence
-### ScreenShot 1: Task creation with command promt
-![Task Created using command promt](images/cmd-prompt.png)
 
-### ScreenShot 2: Filtered for Event Log 4698
-![Filtered Event Log 4698](images/event-4698.png)
+### Screenshot 1: Scheduled Task Creation via Command Prompt
+![Task Created](images/cmd-prompt.png)
 
-### ScreenShot 3: Investigation details for Event ID 4698
-![Investigation Details](images/detail-4698.png)
+### Screenshot 2: Filtered Event ID 4698
+![Event 4698](images/event-4698.png)
 
-### ScreenShot 4: Filtered for Event Log 4699
-![Filtered Event ID 4699](images/event-4699.png)
+### Screenshot 3: Event ID 4698 Task Details
+![Task Details](images/detail-4698.png)
 
-### ScreenShot 5: Investigation details for Event ID 4699
-![Investigation Details](images/detail-4699.png)
+### Screenshot 4: Filtered Event ID 4699
+![Event 4699](images/event-4699.png)
+
+### Screenshot 5: Event ID 4699 Deletion Details
+![Deletion Details](images/detail-4699.png)
 
 ## Findings
-- A scheduled task was created on the system using command promt with admin priviledges
-- The task executed a recuring activity on every Event 4624
-- The task seems suspicious as it contained commands like `-nop, -w hidden,, and -c` which are used for stealth activities
-- Task configuration resmbled a persistence behavior
+- A scheduled task was created on the system using administrative privileges
+- The task was configured to execute automatically upon user logon
+- The task executed PowerShell using the flags `-nop`, `-w hidden`, and `-c`, indicating stealthy and non-interactive execution
+- Task configuration and execution behavior were consistent with persistence techniques
 
-## MITTRE ATT&CK Mapping
-- T1053.05 - Scheduled Task/Jobs
+## MITRE ATT&CK Mapping
+- **T1053.005** – Scheduled Task / Job: Scheduled Task
 
 ## Lessons Learned
-- Scheduled tasks are commonly abused for persistence
-- Attackers make use of certain commands like `-nop, -w hidden, and the -c` to hide traces of their actions from the users
-- Task frequency and persistence are signs of a system security breach
-- Persistence must be correlated with previous activities
+- Scheduled tasks are a commonly abused persistence mechanism
+- Attackers leverage PowerShell flags such as `-nop`, `-w hidden`, and `-c` to reduce visibility
+- Task triggers and execution context are critical when identifying persistence
+- Persistence activity must be correlated with prior authentication and execution events
