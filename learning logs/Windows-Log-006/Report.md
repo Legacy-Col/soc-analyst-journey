@@ -15,19 +15,19 @@ Understanding how SOC analysts detect & analyze persistence mechanism using Wind
 
 ## Evidence
 ### ScreenShot 1: Task creation with command promt
-![]()
+![Task Created using command promt](images/cmd-prompt.png)
 
 ### ScreenShot 2: Filtered for Event Log 4698
-![]()
+![Filtered Event Log 4698](images/event-4698.png)
 
-### ScreenShot 3: Investigation details
-![]()
+### ScreenShot 3: Investigation details for Event ID 4698
+![Investigation Details](images/detail-4698.png)
 
 ### ScreenShot 4: Filtered for Event Log 4699
-![]()
+![Filtered Event ID 4699](images/event-4699.png)
 
-### ScreenShot 5: Investigation details
-![]()
+### ScreenShot 5: Investigation details for Event ID 4699
+![Investigation Details](images/detail-4699.png)
 
 ## Findings
 - A scheduled task was created on the system using command promt with admin priviledges
