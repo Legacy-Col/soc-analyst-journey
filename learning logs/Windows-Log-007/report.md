@@ -25,7 +25,7 @@ Understand how registry keys can be abused for persistence and how SOC analysts 
 ![Filtered Event](images/event-4657.png)
 
 ### Screenshot 3: Event ID 4657 Details
-![Event Details](images/details-4657.png)
+![Event Details](images/detail-4657.png)
 
 ## Findings
 - A registry value was added to a Run key
