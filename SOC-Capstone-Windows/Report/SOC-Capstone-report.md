@@ -100,7 +100,7 @@ Task included:
 -- Strong persistence indicator
 
 **MITRE ATT&CK**
-T1053.005 – Scheduled Task
+- T1053.005 – Scheduled Task
 
 **Severity**
 🔴 High
@@ -116,7 +116,7 @@ T1053.005 – Scheduled Task
 - Confirms multiple persistence mechanisms, not accidental activity
 
 **MITRE ATT&CK**
-T1547.007 – Registry Run Keys
+- T1547.007 – Registry Run Keys
 
 **Severity**
 🔴 Critical
