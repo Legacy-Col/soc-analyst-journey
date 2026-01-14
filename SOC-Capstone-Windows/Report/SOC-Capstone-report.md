@@ -7,7 +7,6 @@ This project demonstrates hands-on SOC analyst skills by analyzing Windows host 
 
 ## 2. Environment Overview
 - Windows 10 Virtual Machine
-- Splunk Enterprise (Local SIEM)
 - Windows Event Logs (Security, PowerShell, Firewall)
 - Audit Policies Enabled
 
