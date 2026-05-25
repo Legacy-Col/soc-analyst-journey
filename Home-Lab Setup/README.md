@@ -110,16 +110,16 @@ ping [KALI IP]
 ## Screenshots
 
 ### VirtualBox — Both VMs Listed
-![VirtualBox Dashboard](./screenshots/virtualbox-dashboard.png)
+![VirtualBox Dashboard](./Screenshots/vbox.png)
 
 ### Windows 10 VM — Running
-![Windows VM](./screenshots/windows-vm-running.png)
+![Windows VM](./Screenshots/windows-vm-running.png)
 
 ### Kali Linux VM — Running
-![Kali VM](./screenshots/kali-vm-running.png)
+![Kali VM](./Screenshots/kali-aktive.png)
 
 ### Network Connectivity — Ping Test
-![Ping Test](./screenshots/ping-test.png)
+![Ping Test](./Screenshots/ping.png)
 
 ---
 
