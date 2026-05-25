@@ -70,7 +70,6 @@ Build a virtualized SOC lab environment simulating a real-world enterprise netwo
 | Windows VM IP | 192.168.56.101 |
 | Kali VM IP |  | 10.0.2.3
 
-
 ---
 
 ## Setup Process
