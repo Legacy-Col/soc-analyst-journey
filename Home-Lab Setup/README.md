@@ -113,7 +113,7 @@ ping [KALI IP]
 ![VirtualBox Dashboard](./Screenshots/vbox.png)
 
 ### Windows 10 VM — Running
-![Windows VM](./Screenshots/windows-vm-running.png)
+![Windows VM](./Screenshots/windows-aktive.png)
 
 ### Kali Linux VM — Running
 ![Kali VM](./Screenshots/kali-aktive.png)
