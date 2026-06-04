@@ -136,9 +136,9 @@ The email contains hundreds of meaningless CSS class names designed to confuse a
 ---
 
 ## Screenshots
-![PhishTool Analysis](./screenshots/phishtool-analysis.png)
-![Header Analysis](./screenshots/header-analysis.png)
-![VirusTotal Results](./screenshots/virustotal-results.png)
+![PhishTool Analysis](./screenshots/phish1.png)
+![Header Analysis](./screenshots/header1.png)
+![VirusTotal Results](./screenshots/virus1.png)
 ![Tracking Pixel Domain](./screenshots/tracking-pixel-flagged.png)
 
 ---
